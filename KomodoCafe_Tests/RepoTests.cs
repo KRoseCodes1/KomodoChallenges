@@ -9,27 +9,22 @@ namespace KomodoCafe_Tests
     public class RepoTests
     {
         private MenuRepo _repo;
-        private Menu _item;
+        private Menu item;
 
         [TestInitialize]
         public void Arrange()
         {
             _repo = new MenuRepo();
-            _item = new Menu();
+            item = new Menu();
         }
             [TestMethod]
         public void CreateNewMenuItem_ShouldReturnNotNull()
         {
-            // Arrange --Set up variables and such
-            Menu item = new Menu();
             item.MealNumber = 5;
-            MenuRepo repository = new MenuRepo();
+           
+            _repo.AddNewMenuItem(item);
+            Menu contentFromRepository = _repo.GetItemByMealNumber(5);
 
-            // Act --Get or run code we want to test
-            repository.AddNewMenuItem(item);
-            Menu contentFromRepository = repository.GetItemByMealNumber(5);
-
-            // Assert -- check results with assert commands
             Assert.IsNotNull(contentFromRepository);
         }
         [TestMethod]
