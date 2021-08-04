@@ -25,13 +25,7 @@ namespace KomodoBadges_Repo
         // Update
         public void UpdateExistingBadge(int id, List<string> newDoors)
         {
-            foreach(KeyValuePair<int, List<string>> kvp in badges)
-            {
-                if (kvp.Key == id)
-                {
-                    badges[kvp.Key] = newDoors;
-                }
-            }
+            badges[id] = newDoors;
         }
         // Delete
         public bool RemoveBadge(int id)

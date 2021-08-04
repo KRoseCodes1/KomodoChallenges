@@ -76,13 +76,13 @@ namespace KomodoBadges_Console
         }
         public void EditBadge()
         {
-            Console.Clear();
             bool keepRun = true;
             while (keepRun)
             {
+                Console.Clear();
                 Console.WriteLine("What would you like to do?\n" +
-                    "1. Add door to badge" +
-                    "2. Remove door from badge" +
+                    "1. Add door to badge\n" +
+                    "2. Remove door from badge\n" +
                     "3. Exit to main menu");
                 string input = Console.ReadLine();
                 switch(input)
@@ -100,6 +100,7 @@ namespace KomodoBadges_Console
                         break;
                     default:
                         Console.WriteLine("Invalid input. Please choose from the available options.");
+                        Console.ReadLine();
                         break;
                 }
             }
@@ -170,10 +171,12 @@ namespace KomodoBadges_Console
                 if (removedSuccesfully)
                 {
                     Console.WriteLine("Removed Succesfully!");
+                    Console.ReadLine();
                 }
                 else
                 {
                     Console.WriteLine("Input was in correct format but a badge with that ID could not be found. Please try again.");
+                    Console.ReadLine();
                 }
             }
             else
@@ -185,7 +188,30 @@ namespace KomodoBadges_Console
         }
         public void AddDoorToBadge()
         {
-
+            Console.Clear();
+            Console.WriteLine("Please enter the ID of the badge you would like to edit:");
+            int id;
+            bool validID = Int32.TryParse(Console.ReadLine(), out id);
+            if (validID)
+            {
+                Dictionary<int, List<string>> dict = _repo.ViewAllBadges();
+                Console.WriteLine("Here are the current doors associated with that id:\n");
+                foreach (string door in dict[id])
+                {
+                    Console.Write($"{door}     ");
+                }
+                Console.WriteLine("\n Enter the door you would like to add:");
+                string doorChoice = Console.ReadLine();
+                dict[id].Add(doorChoice);
+                _repo.UpdateExistingBadge(id, dict[id]);
+                Console.WriteLine("Updated Successfully! Press enter to continue.");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Not a number. Please enter a valid ID.");
+                Console.ReadLine();
+            }
         }
         public void RemoveDoorFromBadge()
         {
@@ -203,14 +229,18 @@ namespace KomodoBadges_Console
                 }
                 Console.WriteLine("\n Which door would you like to remove?");
                 string doorChoice = Console.ReadLine();
-                foreach(string door in dict[id])
+
+                bool wasRemoved = dict[id].Remove(doorChoice);
+                _repo.UpdateExistingBadge(id, dict[id]);
+                if (wasRemoved)
                 {
-                    if(door == doorChoice)
-                    {
-                        dict[id].Remove(doorChoice);
-                        Console.WriteLine("Removed successfully! Press enter to continue.");
-                        Console.ReadLine();
-                    }
+                    Console.WriteLine("Removed successfully! Press enter to continue.");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("Door was not removed. Please try again.");
+                    Console.ReadLine();
                 }
             }
             else
