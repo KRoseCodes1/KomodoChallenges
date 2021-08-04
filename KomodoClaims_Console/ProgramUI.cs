@@ -54,7 +54,7 @@ namespace KomodoClaims_Console
                 }
             }
         }
-        public void ViewClaims()
+        private void ViewClaims()
         {
             Console.Clear();
             Queue<Claim> listOfClaims = _repo.ViewCurrentQueue();
@@ -68,7 +68,7 @@ namespace KomodoClaims_Console
             Console.WriteLine("Press enter to return to the main menu.");
             Console.ReadLine();
         }
-        public void NextClaim()
+        private void NextClaim()
         {
             Console.Clear();
             Claim claim = _repo._currentQueue.Peek();
@@ -95,7 +95,7 @@ namespace KomodoClaims_Console
                     break;
             }
         }
-        public void NewClaim()
+        private void NewClaim()
         {
             Console.Clear();
             Claim newClaim = new Claim();
@@ -216,7 +216,7 @@ namespace KomodoClaims_Console
             "Press enter to return to the main menu.");
             Console.ReadLine();
         }
-        public void SeedContent()
+        private void SeedContent()
         {
             Claim claimOne = new Claim(1010, "Car accident on the 465.", 400.00, new DateTime(2018, 04, 25), new DateTime(2018, 04, 27), true, Claim.ClaimType.Car);
             Claim claimTwo = new Claim(1012, "House fire in kitchen.", 4000.00, new DateTime(2018, 04, 11), new DateTime(2018, 04, 12), true, Claim.ClaimType.House);

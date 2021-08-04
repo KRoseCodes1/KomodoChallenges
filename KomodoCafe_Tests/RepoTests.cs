@@ -20,11 +20,14 @@ namespace KomodoCafe_Tests
             [TestMethod]
         public void CreateNewMenuItem_ShouldReturnNotNull()
         {
+            // Arrange
             item.MealNumber = 5;
            
+            // Act
             _repo.AddNewMenuItem(item);
             Menu contentFromRepository = _repo.GetItemByMealNumber(5);
 
+            // Assert
             Assert.IsNotNull(contentFromRepository);
         }
         [TestMethod]

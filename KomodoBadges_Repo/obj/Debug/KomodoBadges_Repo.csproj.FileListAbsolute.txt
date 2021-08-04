@@ -1,0 +1,6 @@
+C:\Users\xoWic\source\repos\KomodoChallenges\KomodoBadges_Repo\bin\Debug\KomodoBadges_Repo.dll
+C:\Users\xoWic\source\repos\KomodoChallenges\KomodoBadges_Repo\bin\Debug\KomodoBadges_Repo.pdb
+C:\Users\xoWic\source\repos\KomodoChallenges\KomodoBadges_Repo\obj\Debug\KomodoBadges_Repo.csproj.AssemblyReference.cache
+C:\Users\xoWic\source\repos\KomodoChallenges\KomodoBadges_Repo\obj\Debug\KomodoBadges_Repo.csproj.CoreCompileInputs.cache
+C:\Users\xoWic\source\repos\KomodoChallenges\KomodoBadges_Repo\obj\Debug\KomodoBadges_Repo.dll
+C:\Users\xoWic\source\repos\KomodoChallenges\KomodoBadges_Repo\obj\Debug\KomodoBadges_Repo.pdb
