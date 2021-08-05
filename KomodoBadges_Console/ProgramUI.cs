@@ -154,7 +154,6 @@ namespace KomodoBadges_Console
                 }
             }
             newBadge.DoorAccess = doors;
-
             _repo.AddNewBadge(newBadge);
             Console.WriteLine("Success! Press enter to return to the previous menu.");
             Console.ReadLine();
@@ -249,7 +248,6 @@ namespace KomodoBadges_Console
                 Console.ReadLine();
             }
         }
-
         public void Seed()
         {
             Badge one = new Badge(10015, new List<string>() { "A5", "B6", "C6" }, "Intern");

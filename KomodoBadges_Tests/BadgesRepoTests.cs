@@ -22,6 +22,7 @@ namespace KomodoBadges_Tests
         {
             // Arrange
             badge.BadgeID = 10222;
+
             // Act
             _repo.AddNewBadge(badge);
             Dictionary<int, List<string>> dictFromRepo = _repo.ViewAllBadges();
@@ -63,4 +64,3 @@ namespace KomodoBadges_Tests
         }
     }
 }
-

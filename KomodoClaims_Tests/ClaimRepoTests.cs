@@ -26,7 +26,6 @@ namespace KomodoClaims_Tests
             // Assert
             Assert.AreEqual(claim, fromQueue);
         }
-
         [TestMethod]
         public void RemoveFromQueue_ShouldReturnEqualToZero()
         {

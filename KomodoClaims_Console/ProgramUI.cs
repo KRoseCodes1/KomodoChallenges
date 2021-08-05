@@ -115,6 +115,7 @@ namespace KomodoClaims_Console
                     Console.WriteLine("Invalid answer.  Must be a number. Please try again.");
                 }
             }
+
             keepAsking = true;
             while(keepAsking)
             {
@@ -197,7 +198,6 @@ namespace KomodoClaims_Console
                     Console.WriteLine("Answer must be in specified format, please try again.");
                 }
             }
-
             TimeSpan ts = newClaim.DateOfClaim - newClaim.DateOfIncident;
             if(ts.TotalDays < 30)
             {

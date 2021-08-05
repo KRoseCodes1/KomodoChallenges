@@ -9,16 +9,19 @@ namespace KomodoCafeRepo
     public class MenuRepo
     {
         private List<Menu> _listOfMenuItems = new List<Menu>();
+
         // Create
         public void AddNewMenuItem (Menu newItem)
         {
             _listOfMenuItems.Add(newItem);
         }
+
         // Read
         public List<Menu> ViewMenu()
         {
             return _listOfMenuItems;
         }
+
         // Delete
         public bool RemoveFromMenu (int menuNum)
         {
@@ -40,6 +43,7 @@ namespace KomodoCafeRepo
                 return false;
             }
         }
+
         //Helper methods:
         public Menu GetItemByMealNumber(int num)
         {
@@ -52,6 +56,5 @@ namespace KomodoCafeRepo
             }
             return null; 
         }
-
     }
 }

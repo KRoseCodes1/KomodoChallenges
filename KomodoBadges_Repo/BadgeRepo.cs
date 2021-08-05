@@ -17,16 +17,19 @@ namespace KomodoBadges_Repo
             badges.Add(newBadge.BadgeID, newBadge.DoorAccess);
             allBadges.Add(newBadge);
         }
+
         // Read
         public Dictionary<int, List<string>> ViewAllBadges()
         {
             return badges;
         }
+
         // Update
         public void UpdateExistingBadge(int id, List<string> newDoors)
         {
             badges[id] = newDoors;
         }
+
         // Delete
         public bool RemoveBadge(int id)
         {

@@ -15,7 +15,6 @@ namespace KomodoCafeConsole
             Seed();
             MainMenu();
         }
-
         public void MainMenu()
         {
             bool keepRunning = true;
@@ -29,9 +28,7 @@ namespace KomodoCafeConsole
                     "2. Add a new meal\n" +
                     "3. Remove a meal\n" +
                     "4. Exit the Program");
-
                 string input = Console.ReadLine();
-
                 switch(input) 
                 {
                     case "1":
@@ -194,7 +191,6 @@ namespace KomodoCafeConsole
                 }
             }
         }
-
         public void Seed()
         {
             List<string> mealOneIng = new List<string>(){"Bun ", "Cheese ", "Lettuce ", "Special Sauce ", "Beef "};

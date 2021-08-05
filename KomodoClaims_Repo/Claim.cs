@@ -12,7 +12,6 @@ namespace KomodoClaims_Repo
         {
             Car = 1, House, Theft, Renter
         }
-
         public int ClaimID { get; set; }
         public string Description { get; set; }
         public double ClaimAmount { get; set; }
@@ -20,7 +19,6 @@ namespace KomodoClaims_Repo
         public DateTime DateOfClaim { get; set; }
         public bool IsValid { get; set; }
         public ClaimType TypeOfClaim { get; set; }
-
 
         public Claim() { }
         public Claim(int id, string desc, double amt, DateTime doi, DateTime doc, bool valid, ClaimType type)
@@ -33,7 +31,5 @@ namespace KomodoClaims_Repo
             TypeOfClaim = type;
             IsValid = valid;
         }
-
     }
-
 }
