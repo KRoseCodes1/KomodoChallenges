@@ -6,7 +6,7 @@ using System;
 namespace KomodoCafe_Tests
 {
     [TestClass]
-    public class RepoTests
+    public class CafeRepoTests
     {
         private MenuRepo _repo;
         private Menu item;

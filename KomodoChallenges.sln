@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KomodoCafeRepo", "KomodoCafeRepo\KomodoCafeRepo.csproj", "{672E04EE-22EB-47D5-B3DF-80F069913301}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KomodoCafe_Repo", "KomodoCafeRepo\KomodoCafe_Repo.csproj", "{672E04EE-22EB-47D5-B3DF-80F069913301}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KomodoCafeConsole", "KomodoCafeConsole\KomodoCafeConsole.csproj", "{430DA63A-C66D-4D2F-82F8-EB29D959012A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KomodoCafe_Console", "KomodoCafeConsole\KomodoCafe_Console.csproj", "{430DA63A-C66D-4D2F-82F8-EB29D959012A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KomodoCafe_Tests", "KomodoCafe_Tests\KomodoCafe_Tests.csproj", "{AC9B9DFA-AA51-444D-893A-D05C8AEBCC68}"
 EndProject

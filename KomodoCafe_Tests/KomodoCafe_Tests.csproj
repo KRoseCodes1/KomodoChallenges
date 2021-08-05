@@ -49,16 +49,16 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RepoTests.cs" />
+    <Compile Include="CafeRepoTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KomodoCafeRepo\KomodoCafeRepo.csproj">
+    <ProjectReference Include="..\KomodoCafeRepo\KomodoCafe_Repo.csproj">
       <Project>{672e04ee-22eb-47d5-b3df-80f069913301}</Project>
-      <Name>KomodoCafeRepo</Name>
+      <Name>KomodoCafe_Repo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
